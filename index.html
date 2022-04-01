@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperaturmesser</title>
+</head>
+
+<body>
+    <h1>In dieser Webseite wird die Temperatur angezeigt:</h1>
+    <button onclick="getTemperature();">Get Temperature</button>
+    <br><br>
+    <div id="showData"></div>
+    <script>
+        function getTemperature() {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("showData").innerHTML = this.responseText;
+            }
+            xhttp.open("GET", "dataApi.php");
+            xhttp.send();
+        }
+    </script>
+</body>
+
+</html>
