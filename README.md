@@ -2,8 +2,8 @@
 How To Use my Project:
 1. Pull all files into new Project
 2. Change the host and run this code on your IOT Kit
-//
-#include "mbed.h"
+
+//#include "mbed.h"
 #if MBED_CONF_IOTKIT_HTS221_SENSOR == true
 #include "HTS221Sensor.h"
 #endif
